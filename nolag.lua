@@ -1,3 +1,14 @@
+if getgenv and getgenv().FPS_SCRIPT_LOADED then
+    warn("Script already executed!")
+    return
+end
+
+if getgenv then
+    getgenv().FPS_SCRIPT_LOADED = true
+else
+    _G.FPS_SCRIPT_LOADED = true
+end
+
 local success, err = pcall(function()
 
 	local Terrain = workspace.Terrain
