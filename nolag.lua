@@ -9,12 +9,17 @@ local env = getgenv and getgenv() or _G
 
 env.USED_BEFORE = env.USED_BEFORE or false
 
+local msg
 if env.USED_BEFORE then
-    warn("> Welcome back "..name..", thanks for using this script")
+    msg = "> Welcome back "..name..", thanks for using this script"
 else
-    warn("> Hi there "..name..", thanks for using this script")
+    msg = "> Hi there "..name..", thanks for using this script"
     env.USED_BEFORE = true
 end
+
+print("\n==============================")
+print("   "..msg)
+print("==============================\n")
 
 if env.FPS_SCRIPT_LOADED then
     warn("Script already executed!")
@@ -53,11 +58,9 @@ local success, err = pcall(function()
 end)
 
 if success then
-    warn([[
-================================
-   🚀 ENJOY REDUCE LAG 🚀
-================================
-]])
+    warn("==============================")
+    warn("🚀 ENJOY REDUCE LAG 🚀")
+    warn("==============================")
 else
     warn("It doesnt work somehow:", err)
 end
