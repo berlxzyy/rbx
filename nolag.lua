@@ -1,3 +1,7 @@
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+
 if getgenv and getgenv().FPS_SCRIPT_LOADED then
     warn("Script already executed!")
     return
