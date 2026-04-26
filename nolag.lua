@@ -17,9 +17,7 @@ else
     env.USED_BEFORE = true
 end
 
-print("\n==============================")
-print("   "..msg)
-print("==============================\n")
+print("\n"..msg.."\n")
 
 if env.FPS_SCRIPT_LOADED then
     warn("Script already executed!")
@@ -58,9 +56,7 @@ local success, err = pcall(function()
 end)
 
 if success then
-    warn("==============================")
-    warn("🚀 ENJOY REDUCE LAG 🚀")
-    warn("==============================")
+    warn("\n🚀 ENJOY REDUCE LAG 🚀\n")
 else
     warn("It doesnt work somehow:", err)
 end
